@@ -1,18 +1,18 @@
-%define module	Lingua-EN-Inflect
-%define name	perl-%{module}
-%define version 1.89
-%define	release	%mkrel 4
+%define upstream_name	 Lingua-EN-Inflect
+%define upstream_version 1.89
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Perl module to find English word inflections
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Lingua/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The exportable subroutines of Lingua::EN::Inflect provide plural inflections,
@@ -22,7 +22,7 @@ appropriate, "classical" variants (for example: "brother" -> "brethren",
 "dogma" -> "dogmata", etc.) are also provided.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 chmod 644 README Changes lib/Lingua/EN/Inflect.pm
@@ -42,4 +42,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorlib}/Lingua/*
 %{_mandir}/*/*
-
