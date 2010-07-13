@@ -1,5 +1,5 @@
 %define upstream_name	 Lingua-EN-Inflect
-%define upstream_version 1.891
+%define upstream_version 1.892
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
