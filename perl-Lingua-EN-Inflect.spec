@@ -9,6 +9,10 @@ Source: https://cpan.metacpan.org/authors/id/D/DC/DCONWAY/%{module}-%{version}.t
 License: Perl (Artistic or GPL)
 Group: Development/Languages
 BuildArch: noarch
+BuildRequires: perl
+BuildRequires: perl-ExtUtils-MakeMaker
+BuildRequires: perl(ExtUtils::MakeMaker)
+BuildRequires: make
 
 %description
 Convert singular to plural. Select "a" or "an".
