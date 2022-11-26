@@ -12,6 +12,7 @@ BuildArch: noarch
 BuildRequires: perl
 BuildRequires: perl-ExtUtils-MakeMaker
 BuildRequires: perl(ExtUtils::MakeMaker)
+BuildRequires: perl(Test::More)
 BuildRequires: make
 
 %description
