@@ -2,7 +2,7 @@
 
 Name: perl-%{module}
 Version: 1.905
-Release: 1
+Release: 2
 Summary: Convert singular to plural. Select "a" or "an".
 URL: https://metacpan.org/pod/%{module}
 Source: https://cpan.metacpan.org/authors/id/D/DC/DCONWAY/%{module}-%{version}.tar.gz
